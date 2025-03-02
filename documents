@@ -1,0 +1,29 @@
+tesseract --version
+setup tesseract
+
+Step 1: Add Tesseract to System PATH
+To use Tesseract globally in the terminal or Python, add it to the environment variables.
+
+Method 1: Add Manually
+Open Environment Variables:
+-----------------------------
+>> Press Win + R → Type sysdm.cpl → Press Enter
+>> Go to Advanced → Click Environment Variables.
+>> Edit Path Variable:
+
+Under System Variables, find Path and click Edit.
+Click New and add:
+
+>> C:\Program Files\Tesseract-OCR
+Click OK → Restart your PC.
+
+
+pip install pytesseract pillow
+
+download malayalam --> https://github.com/tesseract-ocr/tessdata/blob/main/mal.traineddata
+Move it to the tessdata folder of your Tesseract installation:
+>> C:\Program Files\Tesseract-OCR\tessdata\
+
+Open CMD as Administrator.
+Run this command:
+>> setx TESSDATA_PREFIX "C:\Program Files\Tesseract-OCR\tessdata\"
